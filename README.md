@@ -7,7 +7,7 @@ Note that Java 8 is required to build this project. Hope it helps to fellow deve
 Open Closed Principal in software programming means simply an ideal software application should be open for extensions but closed for modifications. Doing **modifications** here is thought for changing the existing codes of premade modules, classes, etc. On the other hand, what is mentioned when we say **extensions** is adding new classes, modules or even functions without touching the rest of the code base.
 Implications of modification:
 * Leads to unexpected bugs, especially in projects which does not have enough test coverage. 
-* ...
+* TODO
  
 A clear example to show a piece of code which will probably need modifications later on:
 ```java
@@ -34,4 +34,8 @@ if(ModificationType.LESS.equals(type)){
 ```
 Benefits of extensions:
 * TODO
-#### 2. How the OC Principal can be used in Java?
+#### 2. How the OCP can be used in Java?
+### IOC Containers and Dependecy Injection
+#### 1. What are Containers in software?
+#### 2. What is IOC Container?
+#### 3. What is Dependency Injection?
