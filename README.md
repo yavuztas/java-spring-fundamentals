@@ -120,7 +120,31 @@ coffee.taste();
 ```
 
 #### Liskov Substitution Principle
-In a software, objects should be replaceable with instances of their subtypes without altering.
+Liskov Substitution Principle suggests that objects in a software program should be replaceable with the instances of their subtypes without need to change properties of this objects. Another use case of interfaces transpires here, since we need a behavioral relation between subtypes, also called as strong subtyping. Different behaviours output different results so we need to group subtypes with the same behaviour by using interfaces in order not to break our program's output.
+
+An example:
+```java
+public class Fish {
+  public void swim(){
+    System.out.println("Fish is swimming")
+  }
+}
+
+public class DeadFish extends Fish {
+  public void swim(){
+    System.out.println("Cannot swim because I'm dead!")
+  }
+}
+
+List<Fish> pool = new ArrayList<>();
+pool.add(new Fish());
+pool.add(new Fish());
+pool.add(new DeadFish());
+
+for(Fish fish:pool){
+  fish.swim();
+}
+```
 
 #### Interface Segregation Principle
 Interfaces should be separated into many client-specific ones which is better than one general-purpose interface.
