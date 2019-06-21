@@ -39,9 +39,7 @@ if(LoginType.LOCAL_DB.equals(type)){
  // authenticating user from social network accounts
   
 }
-.
-.
-.
+// and this conditional cases can go on...
 ```
 So this code seems to start smelling like becoming a god object. Although it looks like a semi-god for now but it definately intends to become bigger in time unless we do not stop it by **refactoring** like:
 ```java
@@ -84,9 +82,7 @@ if(ModificationType.LESS.equals(type)){
   // vast modification >:O
   
 }
-.
-.
-.
+// and this conditional cases can go on...
 ```
 One of the proper solution to this problem is **Chain of Responsibility** pattern which is also a good example for design by extensions, can be achieved like the code below:
 ```java
@@ -103,7 +99,25 @@ for(IModifier modifier: modifiers){
 }
 ```
 #### 2. How the OCP can be used in Java?
-TODO: Mention about programming to interface
+One of the best practices is **programming to interface** when it comes to applying OCP into java. Programming to interface means to prefer using interfaces instead of concerete types unless you do not specifically need to. Interfaces are the contracts to expose the behaviour type of our program to the outer world. When you design well defined interfaces you always have a chance to create new implementations and easily extend your project without affecting the world outside, which technically means adding extension. By doing this we can say that interfaces really plays nice with the OCP.
+
+Example to show an advantage of using interfaces over concerete types:
+```java
+public interface Coffee {
+  public void taste();
+}
+
+Coffee coffee = new FilterCoffee();
+
+// you taste filter coffee!
+coffee.taste();
+
+// After some time we'd like to discover a new taste and changed our coffee formula!
+Coffee coffee = new EspressoCoffee();
+
+// now you taste espresso, we do not need to modify the code below!
+coffee.taste();
+```
 
 #### Liskov Substitution Principle
 In a software, objects should be replaceable with instances of their subtypes without altering.
