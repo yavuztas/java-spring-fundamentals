@@ -13,8 +13,8 @@ Luckily Java was born as an OOP language and provides its high level users many 
 #### 1. What are these SOLID principals?
 We have five principals each of them stands for each letter **S-O-L-I-D** which are *Single Responsibility Principal, Open Closed Principal, Liskov Substitution Principal, Interface Segregation Principal and Dependency Inversion Principal.*
 
-### SOLID Principals in detail
-### Single Responsibility Principal
+#### 2. SOLID Principals in detail
+#### Single Responsibility Principal
 Single Responsibility Principal in software programming suggests that a class should have only one single responsibility. By this way, one class can only modify one part of the software's specification. Classes trying to handle more than one responsibility will eventually ensue fragility and become impossible to maintain. Thus it is clearly seen that violation of this principal cause us the famous **God Object** anti-pattern.
 
 An example to indicate a violation of single responsibility problem:
@@ -57,7 +57,7 @@ ApplicationContext.registerBean(SocialLoginManager.class);
 ILoginManager loginManager = ApplicationContext.getBean(ILoginManager.class);
 loginManager.authenticate();
 ```
-### Open Closed Principal
+#### Open Closed Principal
 #### 1. What is OCP?
 Open Closed Principal in software programming simply means that an ideal software application should be open for extensions but closed for modifications. Doing **modifications** here is thought for changing the existing codes of premade modules, classes, etc. On the other hand, what is mentioned when we say **extensions** is adding new classes, modules or even functions without touching the rest of the code base.
 
@@ -94,13 +94,13 @@ Benefits of extensions:
 #### 2. How the OCP can be used in Java?
 TODO: Mention about programming to interface
 
-### Liskov Substitution Principle
+#### Liskov Substitution Principle
 In a software, objects should be replaceable with instances of their subtypes without altering.
 
-### Interface Segregation Principle
+#### Interface Segregation Principle
 Interfaces should be separated into many client-specific ones which is better than one general-purpose interface.
 
-### Dependency Inversion Principle
+#### Dependency Inversion Principle
 Should prefer depending upon abstract classes rather than concerete ones.
 
 ### IOC Containers and Dependecy Injection
