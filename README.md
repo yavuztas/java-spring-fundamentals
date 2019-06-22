@@ -11,7 +11,7 @@ One of the most popular programming paradigm is called Object Oriented Programmi
 Luckily Java was born as an OOP language and provides many high level structures to its users formed by objects. Thus we do not need to worry about most of the low level operations. However there are further principals to learn in order to apply OOP correctly. These are widely known as solid principals in programming world. When we say solid they really form the **SOLID** :) It is a funny story about that our former computer scientists culminated into a mnemonic acronym for five oop design principles intended to make software designs better and understandable.
 
 #### 1. What are these SOLID principals?
-We have five principals each of them stands for each letter **S-O-L-I-D** which are *[Single Responsibility Principal](#single-responsibility-principal), Open Closed Principal, Liskov Substitution Principal, Interface Segregation Principal and Dependency Inversion Principal.*
+We have five principals each of them stands for each letter **S-O-L-I-D** which are *[Single Responsibility Principal](#single-responsibility-principal), [Open Closed Principal](#open-closed-principal), [Liskov Substitution Principal](#liskov-substitution-principal), [Interface Segregation Principal](#interface-segregation-principal) and [Dependency Inversion Principal](#dependency-inversion-principal).*
 
 #### Single-Responsibility-Principal
 Single Responsibility Principal in software programming suggests that a class should have only one single responsibility. By this way, one class can only modify one part of the software's specification. Classes trying to handle more than one responsibility will eventually ensue fragility and become impossible to maintain. Thus it is clearly seen that violation of this principal cause us the famous **God Object** anti-pattern.
@@ -54,7 +54,7 @@ context.registerBean(SocialLoginManager.class);
 ILoginManager loginManager = context.getBean(ILoginManager.class);
 loginManager.authenticate();
 ```
-You can see [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) for detail information.
+You can see [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) in wikipedia for details.
 #### Open Closed Principal
 #### 1. What is OCP?
 Open Closed Principal in software programming simply means that an ideal software application should be open for extensions but closed for modifications. Doing **modifications** here is thought for changing the existing codes of premade modules, classes, etc. On the other hand, what is mentioned when we say **extensions** is adding new classes, modules or even functions without touching the rest of the code base.
@@ -119,7 +119,7 @@ Coffee coffee = new EspressoCoffee();
 // now you taste espresso, we do not need to modify the code below!
 coffee.taste();
 ```
-
+You can see [open closed principal](https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle) in wikipedia for details.
 #### Liskov Substitution Principle
 Liskov Substitution Principle suggests that objects in a software program should be replaceable with the instances of their subtypes without need to change properties of this objects. Another use case of interfaces transpires here, since we need a behavioral similarity between subtypes, also called as **strong behavioral subtyping**. Different behaviours can output different results so we need to group subtypes with the similar behaviour by using interfaces not to break our program's expected output.
 
@@ -181,7 +181,7 @@ for(Fish fish:pool){
   fish.swim();
 }
 ```
-
+You can see [liskov substitution principle](https://en.wikipedia.org/wiki/Liskov_substitution_principle) in wikipedia for details.
 #### Interface Segregation Principle
 Interface Segregation Principle in a software simply tells us that instead of one general-purpose interface, it is better to use many client-specific ones. One obvious problem we can encounter when we violate this principal is the boilerplate invasion of meaningless, empty methods.
 
@@ -237,7 +237,7 @@ public class SwimmingAnimal implements CanSwim {
   }
 }
 ```
-
+You can see [interface segregation principle](https://en.wikipedia.org/wiki/Interface_segregation_principle) in wikipedia for details.
 #### Dependency Inversion Principle
 Dependency Inversion Principle states that in a software program high level objects should not depend on low level objects on the contrary both should depend abstractions. Not unlike, concerete classes should depend on abstractions not vice versa. After these abstract explanations let us be a little bit more exemplery.
 
@@ -281,8 +281,10 @@ public class OperatingSystem {
   }
 }
 ```
+You can see [dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle) in wikipedia for details.
 
 After we explained OOP and the solid principals shortly we will go on containers, inversion of control and dependecy injection terms in programming and start explaining the fundamentals of Spring by giving some examples how they are used in Spring Framework.
+
 ### IOC Containers and Dependecy Injection
 #### 1. What are Containers in software?
 #### 2. What is IOC Container?
