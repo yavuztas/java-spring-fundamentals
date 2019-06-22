@@ -11,9 +11,9 @@ One of the most popular programming paradigm is called Object Oriented Programmi
 Luckily Java was born as an OOP language and provides many high level structures to its users formed by objects. Thus we do not need to worry about most of the low level operations. However there are further principals to learn in order to apply OOP correctly. These are widely known as solid principals in programming world. When we say solid they really form the **SOLID** :) It is a funny story about that our former computer scientists culminated into a mnemonic acronym for five oop design principles intended to make software designs better and understandable.
 
 #### 1. What are these SOLID principals?
-We have five principals each of them stands for each letter **S-O-L-I-D** which are *[Single Responsibility Principal](#single_responsibility_principal), Open Closed Principal, Liskov Substitution Principal, Interface Segregation Principal and Dependency Inversion Principal.*
+We have five principals each of them stands for each letter **S-O-L-I-D** which are *[Single Responsibility Principal](#single-responsibility-principal), Open Closed Principal, Liskov Substitution Principal, Interface Segregation Principal and Dependency Inversion Principal.*
 
-#### [Single Responsibility Principal](#single_responsibility_principal)
+#### [Single-Responsibility-Principal](#single_responsibility_principal)
 Single Responsibility Principal in software programming suggests that a class should have only one single responsibility. By this way, one class can only modify one part of the software's specification. Classes trying to handle more than one responsibility will eventually ensue fragility and become impossible to maintain. Thus it is clearly seen that violation of this principal cause us the famous **God Object** anti-pattern.
 
 An example to indicate a violation of single responsibility problem:
