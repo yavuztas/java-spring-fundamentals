@@ -238,7 +238,7 @@ public class SwimmingAnimal implements CanSwim {
 ```
 
 #### Dependency Inversion Principle
-Dependency Inversion Principle informs us that ...
+Dependency Inversion Principle states that ...
 
 Should prefer depending upon abstract classes rather than concerete ones.
 
