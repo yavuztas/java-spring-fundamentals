@@ -238,10 +238,48 @@ public class SwimmingAnimal implements CanSwim {
 ```
 
 #### Dependency Inversion Principle
-Dependency Inversion Principle states that ...
+Dependency Inversion Principle states that in a software program high level objects should not depend on low level objects on the contrary both should depend abstractions. Not unlike, concerete classes should depend on abstractions not vice versa. After these abstract explanations let us be a little bit more exemplery.
 
-Should prefer depending upon abstract classes rather than concerete ones.
+An example of a DIP violation:
+```java
+public class OperatingSystem {
+  
+  private HttpService httpService = new HttpService();
+  private SmtpService smtpService = new SmtpService();
+  
+  public void runOnStartup() {
+    httpService.startHttpd();
+    smtpService.startSmtpd();
+  }
+}
+```
+Instead of depending concerete ones we should definately make an abstraction by the help of interfaces and refactor our tiny operating system to accept only abstract services in order to initiate on os start up. See the code below:
+```java
+public class HttpService implements IService {
+  public void start(){
+    System.out.println("Starting httpd service...");
+  }
+}
 
+public class SmtpService implements IService {
+  public void start(){
+    System.out.println("Starting smtpd service...");
+  }
+}
+
+public class OperatingSystem {
+  
+  private List<IService> services = new ArrayList<>();
+  
+  public void register(IService service){
+    this.services.add(service);
+  }
+  
+  public void runOnStartup() {
+    this.services.forEach(s -> s.start());
+  }
+}
+```
 ### IOC Containers and Dependecy Injection
 #### 1. What are Containers in software?
 #### 2. What is IOC Container?
