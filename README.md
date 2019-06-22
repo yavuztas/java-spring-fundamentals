@@ -120,13 +120,13 @@ coffee.taste();
 ```
 
 #### Liskov Substitution Principle
-Liskov Substitution Principle suggests that objects in a software program should be replaceable with the instances of their subtypes without need to change properties of this objects. Another use case of interfaces transpires here, since we need a behavioral relation between subtypes, also called as strong subtyping. Different behaviours output different results so we need to group subtypes with the same behaviour by using interfaces in order not to break our program's output.
+Liskov Substitution Principle suggests that objects in a software program should be replaceable with the instances of their subtypes without need to change properties of this objects. Another use case of interfaces transpires here, since we need a behavioral relation between subtypes, also called as strong subtyping. Different behaviours output different results so we need to group subtypes with the similar behaviour by using interfaces not to break our program's expected output.
 
-An example:
+An example to demonstrate this problem:
 ```java
 public class Fish {
   public void swim(){
-    System.out.println("Fish is swimming")
+    System.out.println("I'm swimming")
   }
 }
 
@@ -136,10 +136,45 @@ public class DeadFish extends Fish {
   }
 }
 
+// Assume that we need a fishing pool which every Fish instance should swim.
+// However as you can see some instances will not be able to swim because they are dead.
 List<Fish> pool = new ArrayList<>();
 pool.add(new Fish());
 pool.add(new Fish());
 pool.add(new DeadFish());
+
+for(Fish fish:pool){
+  fish.swim();
+}
+```
+An elegant solution comes with the help of interfaces to discriminate behavioral subtypes:
+```java
+public interface Alive {
+  public void swim();
+}
+
+public interface Dead {
+  public void sink();
+}
+
+public class AliveFish extends Fish implements Alive {
+  public void swim(){
+    System.out.println("I'm swimming :)");
+  }
+}
+
+public class DeadFish extends Fish implements Dead {
+  public void sink(){
+    System.out.println("I'm sinking :(");
+  }
+}
+
+// So we need only alive fish for our fishing pool. 
+// Now we are sure that every Fish instance in our pool can swim!
+List<Alive> pool = new ArrayList<>();
+pool.add(new AliveFish());
+pool.add(new AliveFish());
+pool.add(new AliveFish());
 
 for(Fish fish:pool){
   fish.swim();
