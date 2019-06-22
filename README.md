@@ -8,12 +8,12 @@ First of all before we dive into Spring, one should get familiar with some basic
 ### Object Oriented Programming
 One of the most popular programming paradigm is called Object Oriented Programming, generally abbreviated as OOP, suggests that **objects** should be used in computer programs. Objects are special structures in programming contain **data** in forms of their properties, also named as attributes. Besides they contain procedures which are responsible for altering this data. These are mostly called as functions.
 
-Luckily Java was born as an OOP language and provides its high level users many structures formed by objects. Thus we do not need to worry about most of the low level operations. However there are further principals to learn in order to apply OOP correctly. These are widely known as solid principals in programming world. When we say solid they really form the **SOLID**. It is a funny story about that our former computer scientists culminated into a mnemonic acronym for five oop design principles intended to make software designs better and understandable.
+Luckily Java was born as an OOP language and provides many high level structures to its users formed by objects. Thus we do not need to worry about most of the low level operations. However there are further principals to learn in order to apply OOP correctly. These are widely known as solid principals in programming world. When we say solid they really form the **SOLID** :) It is a funny story about that our former computer scientists culminated into a mnemonic acronym for five oop design principles intended to make software designs better and understandable.
 
 #### 1. What are these SOLID principals?
-We have five principals each of them stands for each letter **S-O-L-I-D** which are *Single Responsibility Principal, Open Closed Principal, Liskov Substitution Principal, Interface Segregation Principal and Dependency Inversion Principal.*
+We have five principals each of them stands for each letter **S-O-L-I-D** which are *[Single Responsibility Principal](#single_responsibility_principal), Open Closed Principal, Liskov Substitution Principal, Interface Segregation Principal and Dependency Inversion Principal.*
 
-#### Single Responsibility Principal
+#### [Single Responsibility Principal](#single_responsibility_principal)
 Single Responsibility Principal in software programming suggests that a class should have only one single responsibility. By this way, one class can only modify one part of the software's specification. Classes trying to handle more than one responsibility will eventually ensue fragility and become impossible to maintain. Thus it is clearly seen that violation of this principal cause us the famous **God Object** anti-pattern.
 
 An example to indicate a violation of single responsibility problem:
@@ -54,6 +54,7 @@ context.registerBean(SocialLoginManager.class);
 ILoginManager loginManager = context.getBean(ILoginManager.class);
 loginManager.authenticate();
 ```
+You can see [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) for detail information.
 #### Open Closed Principal
 #### 1. What is OCP?
 Open Closed Principal in software programming simply means that an ideal software application should be open for extensions but closed for modifications. Doing **modifications** here is thought for changing the existing codes of premade modules, classes, etc. On the other hand, what is mentioned when we say **extensions** is adding new classes, modules or even functions without touching the rest of the code base.
