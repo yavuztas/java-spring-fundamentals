@@ -13,7 +13,7 @@ Luckily Java was born as an OOP language and provides many high level structures
 #### 1. What are these SOLID principals?
 We have five principals each of them stands for each letter **S-O-L-I-D** which are *[Single Responsibility Principal](#single-responsibility-principal), Open Closed Principal, Liskov Substitution Principal, Interface Segregation Principal and Dependency Inversion Principal.*
 
-#### [Single-Responsibility-Principal](#single_responsibility_principal)
+#### Single-Responsibility-Principal
 Single Responsibility Principal in software programming suggests that a class should have only one single responsibility. By this way, one class can only modify one part of the software's specification. Classes trying to handle more than one responsibility will eventually ensue fragility and become impossible to maintain. Thus it is clearly seen that violation of this principal cause us the famous **God Object** anti-pattern.
 
 An example to indicate a violation of single responsibility problem:
