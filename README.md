@@ -280,6 +280,8 @@ public class OperatingSystem {
   }
 }
 ```
+
+After we explained OOP and the solid principals shortly we will go on containers, inversion of control and dependecy injection terms in programming and give some examples how they are used in Spring Framework.
 ### IOC Containers and Dependecy Injection
 #### 1. What are Containers in software?
 #### 2. What is IOC Container?
