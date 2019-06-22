@@ -1,4 +1,4 @@
-# Java Spring Fundamentals
+# Spring Framework Fundamentals
 This is an educational repository aims to provide fundamental information and code samples about Java and mainly focused on Spring Framework. I intent to prepare this repository not only to refresh my knowledge but also for public benefit. So feel free to drop comments about your opinion and any contributions are welcome!
 
 Note that in order to build and run sample codes in this project Java 8 is required.
