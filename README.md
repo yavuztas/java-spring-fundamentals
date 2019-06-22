@@ -4,7 +4,7 @@ This is an educational repository aims to provide fundamental information and co
 Note that in order to build and run sample codes in this project Java 8 is required.
 
 ### Before Start
-First of all before we dive into Spring, one should get familiar with some basic programming principals which are highly accepted in Java world and moreover strictly followed in Spring Framework. By this way, I believe this guide will be much more effective and easily understandable. So let's get started on this.
+First of all before we dive into Spring, one should get familiar with some basic programming principals which are highly accepted in Java world and moreover strictly followed in Spring Framework. By this way, I believe this guide will be much more effective and easily understandable.
 ### Object Oriented Programming
 One of the most popular programming paradigm is called Object Oriented Programming, generally abbreviated as OOP, suggests that **objects** should be used in computer programs. Objects are special structures in programming contain **data** in forms of their properties, also named as attributes. Besides they contain procedures which are responsible for altering this data. These are mostly called as functions.
 
@@ -84,7 +84,7 @@ if(ModificationType.LESS.equals(type)){
 }
 // and this conditional cases can go on...
 ```
-One of the proper solution to this problem is **Chain of Responsibility** pattern which is also a good example for design by extensions, can be achieved like the code below:
+One proper solution to this problem is **Chain of Responsibility** pattern which is also a good example for design by extensions, can be achieved like the code below:
 ```java
 // new modifier implementations can be easily added without touching the rest of the code
 modifiers.add(new LessModifier());
@@ -99,7 +99,7 @@ for(IModifier modifier: modifiers){
 }
 ```
 #### 2. How the OCP can be used in Java?
-One of the best practices is **programming to interface** when it comes to applying OCP into java. Programming to interface means to prefer using interfaces instead of concerete types unless you do not specifically need to. Interfaces are the contracts to expose the behaviour type of our program to the outer world. When you design well defined interfaces you always have a chance to create new implementations and easily extend your project without affecting the world outside, which technically means adding extension. By doing this we can say that interfaces really plays nice with the OCP.
+One of the best practices is **programming to interface** when it comes to applying OCP into java. Programming to interface means to prefer using interfaces instead of concerete types unless you do not specifically need to. Interfaces are the contracts to expose the behaviour type of our program to the outer world. By the help of well defined interfaces you always have a chance to create new implementations and easily extend your project without affecting the world outside, which technically means adding extension. Hence we can say that interfaces really plays nice with the OCP.
 
 Example to show an advantage of using interfaces over concerete types:
 ```java
@@ -120,7 +120,7 @@ coffee.taste();
 ```
 
 #### Liskov Substitution Principle
-Liskov Substitution Principle suggests that objects in a software program should be replaceable with the instances of their subtypes without need to change properties of this objects. Another use case of interfaces transpires here, since we need a behavioral relation between subtypes, also called as strong subtyping. Different behaviours output different results so we need to group subtypes with the similar behaviour by using interfaces not to break our program's expected output.
+Liskov Substitution Principle suggests that objects in a software program should be replaceable with the instances of their subtypes without need to change properties of this objects. Another use case of interfaces transpires here, since we need a behavioral similarity between subtypes, also called as **strong behavioral subtyping**. Different behaviours can output different results so we need to group subtypes with the similar behaviour by using interfaces not to break our program's expected output.
 
 An example to demonstrate this problem:
 ```java
@@ -147,7 +147,7 @@ for(Fish fish:pool){
   fish.swim();
 }
 ```
-An elegant solution comes with the help of interfaces to discriminate behavioral subtypes:
+An elegant solution comes with the help of interfaces to discriminate subtypes according to their behaviors:
 ```java
 public interface Alive {
   public void swim();
@@ -182,9 +182,64 @@ for(Fish fish:pool){
 ```
 
 #### Interface Segregation Principle
-Interfaces should be separated into many client-specific ones which is better than one general-purpose interface.
+Interface Segregation Principle in a software simple tells us that instead of one general-purpose interface, it is better to use many client-specific ones. One obvious problem we can encounter, when we violate this principal, is the boilerplate invasion of meaningless, empty methods.
+
+Let us show this problem with an example:
+```java
+public interface Animal {
+  
+  public void swim();
+  
+  public void fly();
+  
+  public void run();
+  
+}
+
+public class SwimmingAnimal implements Animal {
+
+  public void swim(){
+    System.out.println("Oh it's swimming, I know how to swim :)");
+  }
+  
+  /*
+   * Ideally we do not need to implement the methods below
+   */
+  public void fly(){
+    System.out.println("What am i going to do?");
+  }
+  
+  public void run(){
+    System.out.println("What am i going to do?");
+  }
+  
+}
+```
+And the solution would be splitting our general interface into more specific ones such as:
+```java
+public interface CanSwim extends Animal {
+  public void swim();
+}
+
+public interface CanFly extends Animal {
+  public void fly();
+}
+
+public interface CanRun extends Animal {
+  public void run();
+}
+
+// no need to implement unnecessary methods 
+public class SwimmingAnimal implements CanSwim {
+  public void swim(){
+    System.out.println("Oh it's swimming, I know how to swim :)");
+  }
+}
+```
 
 #### Dependency Inversion Principle
+Dependency Inversion Principle informs us that ...
+
 Should prefer depending upon abstract classes rather than concerete ones.
 
 ### IOC Containers and Dependecy Injection
