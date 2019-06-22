@@ -13,7 +13,7 @@ Luckily Java was born as an OOP language and provides many high level structures
 #### 1. What are these SOLID principals?
 We have five principals each of them stands for each letter **S-O-L-I-D** which are *[Single Responsibility Principal](#single-responsibility-principal), [Open Closed Principal](#open-closed-principal), [Liskov Substitution Principal](#liskov-substitution-principle), [Interface Segregation Principal](#interface-segregation-principle) and [Dependency Inversion Principal](#dependency-inversion-principle).*
 
-#### Single-Responsibility-Principal
+#### Single Responsibility Principal
 Single Responsibility Principal in software programming suggests that one should have only one single responsibility. We usually refer any module, class or function here. Hence from the OOP perspective it refers objects which can might be modules or classes mostly. By this way, one object can only modify one part of the software's specification. Objects trying to handle more than one responsibility will eventually ensue fragility and become impossible to maintain. Thus it is clearly seen that violation of this principal causes us the famous **God Object** anti-pattern in time.
 
 An example to indicate a violation of single responsibility problem:
@@ -57,12 +57,12 @@ loginManager.authenticate();
 You can see [single responsibility principal](https://en.wikipedia.org/wiki/Single_responsibility_principle) in wikipedia for details.
 #### Open Closed Principal
 #### 1. What is OCP?
-Open Closed Principal in software programming simply means that an ideal software application should be open for extensions but closed for modifications. Doing **modifications** here is thought for changing the existing codes of premade modules, classes, etc. On the other hand, what is mentioned when we say **extensions** is adding new classes, modules or even functions without touching the rest of the code base.
+Open Closed Principal in software programming simply means that an ideal software application should be open for extensions but closed for modifications. Doing **modifications** here is thought for changing the existing codes of pre-made modules, classes, etc. On the other hand, what is mentioned when we say **extensions** is adding new classes, modules or even functions without touching the rest of the code base.
 
 Some implications of modification:
-* Leads to unexpected bugs, especially in projects which does not have enough test coverage. 
 * Increase fragility, decrease maintainability.
 * Causes strictly tight modules and classes.
+* Leads to unexpected bugs, especially in projects which does not have enough test coverage.
  
 A clear example to show a piece of code which will probably need modifications later on:
 ```java
@@ -102,7 +102,7 @@ for(IModifier modifier: modifiers){
 #### 2. How the OCP can be used in Java?
 One of the best practices is **programming to interface** when it comes to applying OCP into java. Programming to interface means to prefer using interfaces instead of concerete types unless you do not specifically need to. Interfaces are the contracts to expose the behaviour type of our program to the outer world. By the help of well defined interfaces you always have a chance to create new implementations and easily extend your project without affecting the world outside, which technically means adding extension. Hence we can say that interfaces really plays nice with the OCP.
 
-Example to show an advantage of using interfaces over concerete types:
+A simple example to show an advantage of using interfaces over concerete types:
 ```java
 public interface Coffee {
   public void taste();
@@ -137,7 +137,7 @@ public class DeadFish extends Fish {
   }
 }
 
-// Assume that we need a fishing pool which every Fish instance should swim.
+// Assume that we need a fishing pool which every Fish instance must swim.
 // However as you can see some instances will not be able to swim because they are dead.
 List<Fish> pool = new ArrayList<>();
 pool.add(new Fish());
@@ -283,7 +283,7 @@ public class OperatingSystem {
 ```
 You can see [dependency inversion principle](https://en.wikipedia.org/wiki/Dependency_inversion_principle) in wikipedia for details.
 
-After we explained OOP and the solid principals shortly we will go on containers, inversion of control and dependecy injection terms in programming and start explaining the fundamentals of Spring by giving some examples how they are used in Spring Framework.
+After we explained OOP and the solid principals shortly we will go on *containers, inversion of control and dependecy injection* and start explaining the fundamentals of Spring by giving some examples how they are applied in Spring Framework.
 
 ### IOC Containers and Dependecy Injection
 #### 1. What are Containers in software?
