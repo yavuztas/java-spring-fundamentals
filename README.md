@@ -14,7 +14,7 @@ Luckily Java was born as an OOP language and provides many high level structures
 We have five principals each of them stands for each letter **S-O-L-I-D** which are *[Single Responsibility Principal](#single-responsibility-principal), [Open Closed Principal](#open-closed-principal), [Liskov Substitution Principal](#liskov-substitution-principle), [Interface Segregation Principal](#interface-segregation-principle) and [Dependency Inversion Principal](#dependency-inversion-principle).*
 
 #### Single-Responsibility-Principal
-Single Responsibility Principal in software programming suggests that a class should have only one single responsibility. By this way, one class can only modify one part of the software's specification. Classes trying to handle more than one responsibility will eventually ensue fragility and become impossible to maintain. Thus it is clearly seen that violation of this principal cause us the famous **God Object** anti-pattern.
+Single Responsibility Principal in software programming suggests that one should have only one single responsibility. We usually refer any module, class or function here. Hence from the OOP perspective it refers objects which can might be modules or classes mostly. By this way, one object can only modify one part of the software's specification. Objects trying to handle more than one responsibility will eventually ensue fragility and become impossible to maintain. Thus it is clearly seen that violation of this principal causes us the famous **God Object** anti-pattern in time.
 
 An example to indicate a violation of single responsibility problem:
 ```java
