@@ -182,7 +182,7 @@ for(Fish fish:pool){
 ```
 
 #### Interface Segregation Principle
-Interface Segregation Principle in a software simple tells us that instead of one general-purpose interface, it is better to use many client-specific ones. One obvious problem we can encounter, when we violate this principal, is the boilerplate invasion of meaningless, empty methods.
+Interface Segregation Principle in a software simply tells us that instead of one general-purpose interface, it is better to use many client-specific ones. One obvious problem we can encounter when we violate this principal is the boilerplate invasion of meaningless, empty methods.
 
 Let us show this problem with an example:
 ```java
