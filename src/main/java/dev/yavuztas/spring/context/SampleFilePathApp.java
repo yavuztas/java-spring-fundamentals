@@ -2,7 +2,7 @@ package dev.yavuztas.spring.context;
 
 import org.springframework.context.support.FileSystemXmlApplicationContext;
 
-public class SampleApp {
+public class SampleFilePathApp {
 
 	public static void main(String[] args) {
 
