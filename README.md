@@ -13,3 +13,4 @@ First of all before we dive into Spring, one should get familiar with some basic
 1. [Object Oriented Programming and SOLID Principles](https://yavuztas.dev/java/oop/2019/06/22/object-oriented-programming-and-solid-principles.html)
 2. [Containers, Inversion of Control and Dependency Injection](https://yavuztas.dev)
 3. [*ApplicationContex* in Spring Framework](https://yavuztas.dev)
+4. [Component Scan and Auto-Injection](https://yavuztas.dev)

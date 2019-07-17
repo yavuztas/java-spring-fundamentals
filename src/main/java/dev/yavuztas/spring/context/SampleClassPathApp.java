@@ -7,6 +7,7 @@ public class SampleClassPathApp {
 	public static void main(String[] args) {
 
 		ClassPathXmlApplicationContext appContext = new ClassPathXmlApplicationContext("beans.xml");
+		appContext.registerShutdownHook();
 
 		assert appContext.containsBean("sampleBean");
 

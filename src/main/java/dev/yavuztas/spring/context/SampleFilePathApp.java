@@ -7,6 +7,7 @@ public class SampleFilePathApp {
 	public static void main(String[] args) {
 
 		FileSystemXmlApplicationContext appContext = new FileSystemXmlApplicationContext("src/main/resources/beans.xml");
+		appContext.registerShutdownHook();
 
 		assert appContext.containsBean("sampleBean");
 
