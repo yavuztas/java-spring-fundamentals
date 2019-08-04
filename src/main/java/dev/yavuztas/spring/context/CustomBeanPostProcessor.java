@@ -5,20 +5,20 @@ import org.springframework.beans.factory.config.BeanPostProcessor;
 
 public class CustomBeanPostProcessor implements BeanPostProcessor {
 
-	@Override
-	public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
+    @Override
+    public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
 
-		System.out.println("--- postProcessBeforeInitialization executed ---");
+        System.out.println("--- postProcessBeforeInitialization executed ---");
 
-		return BeanPostProcessor.super.postProcessBeforeInitialization(bean, beanName);
-	}
+        return BeanPostProcessor.super.postProcessBeforeInitialization(bean, beanName);
+    }
 
-	@Override
-	public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
+    @Override
+    public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
 
-		System.out.println("--- postProcessAfterInitialization executed ---");
+        System.out.println("--- postProcessAfterInitialization executed ---");
 
-		return BeanPostProcessor.super.postProcessAfterInitialization(bean, beanName);
-	}
+        return BeanPostProcessor.super.postProcessAfterInitialization(bean, beanName);
+    }
 
 }
